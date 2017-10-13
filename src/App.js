@@ -2,21 +2,17 @@ import React, { Component } from 'react';
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { graphUri } from './config';
+import { graphUri, wsConnectionUrl } from './config';
 import GlobesView from './views/Globes';
 import NotFound from './views/NotFound';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { SubscriptionClient, addGraphQLSubscriptions } from 'subscriptions-transport-ws';
-//import AppBarComponent from './components/AppBar';
 
 const networkInterface = createNetworkInterface({ 
   uri: graphUri
 });
 
-//console.log(process.env.NODE_ENV);
-//console.log('Check this diego: ' + graphUri);
-
-const wsClient = new SubscriptionClient(`ws://localhost:4000/subscriptions`, {
+const wsClient = new SubscriptionClient(wsConnectionUrl, {
   reconnect: true,
 });
 
