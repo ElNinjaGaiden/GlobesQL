@@ -167,5 +167,7 @@ class GlobesView extends React.Component {
         }
     }
 }
+
+//export default GlobesView;
  
 export default graphql(globesQuery)(GlobesView);

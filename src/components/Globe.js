@@ -27,11 +27,11 @@ class Globe extends React.Component {
                 }
             },
             update: (store, { data: { deleteGlobe } }) => {
-                if(typeof deleteGlobe === 'undefined') return;
+                if(typeof deleteGlobe === 'undefined' || !deleteGlobe) return;
                 // Read the data from the cache for this query.
                 const data = store.readQuery({query: globesQuery });
                 const globeIndex = data.globes.findIndex((g) => {
-                    console.log(g, deleteGlobe, typeof deleteGlobe, !deleteGlobe);
+                    //console.log(g, deleteGlobe, typeof deleteGlobe, !deleteGlobe);
                     return g.id === deleteGlobe.id;
                 });
                 if (globeIndex > -1) {
