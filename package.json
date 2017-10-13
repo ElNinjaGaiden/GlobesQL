@@ -22,7 +22,7 @@
     "subscriptions-transport-ws": "^0.7.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "sh ./startup.sh",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
