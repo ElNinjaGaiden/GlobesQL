@@ -1,13 +1,16 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
-import { newPlayerMutation } from '../data/Globes';
+import { newPlayerMutation, globesQuery } from '../data/Globes';
 
 class UserInfo extends React.Component {
 
     componentWillMount = () => {
         const { mutate } = this.props;
         mutate({
-            variables: {}
+            variables: {},
+            refetchQueries: [ { query: globesQuery } ]
+        }).then(res => {
+
         });
     }
 
