@@ -30,7 +30,10 @@ class Globe extends React.Component {
                 if(typeof deleteGlobe === 'undefined') return;
                 // Read the data from the cache for this query.
                 const data = store.readQuery({query: globesQuery });
-                const globeIndex = data.globes.findIndex((g) => g.id === deleteGlobe.id);
+                const globeIndex = data.globes.findIndex((g) => {
+                    console.log(g, deleteGlobe);
+                    return g.id === deleteGlobe.id;
+                });
                 if (globeIndex > -1) {
                     data.globes.splice(globeIndex, 1);
                     // Write the data back to the cache.
