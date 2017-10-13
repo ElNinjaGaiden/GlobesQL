@@ -13,8 +13,8 @@ const networkInterface = createNetworkInterface({
   uri: graphUri
 });
 
-console.log(process.env.NODE_ENV);
-console.log('Check this diego: ' + graphUri);
+//console.log(process.env.NODE_ENV);
+//console.log('Check this diego: ' + graphUri);
 
 const wsClient = new SubscriptionClient(`ws://localhost:4000/subscriptions`, {
   reconnect: true,
