@@ -31,7 +31,7 @@ class Globe extends React.Component {
                 // Read the data from the cache for this query.
                 const data = store.readQuery({query: globesQuery });
                 const globeIndex = data.globes.findIndex((g) => {
-                    console.log(g, deleteGlobe);
+                    console.log(g, deleteGlobe, typeof deleteGlobe, !deleteGlobe);
                     return g.id === deleteGlobe.id;
                 });
                 if (globeIndex > -1) {
