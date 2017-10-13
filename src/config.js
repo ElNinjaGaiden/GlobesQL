@@ -1,0 +1,1 @@
+export const graphUri = process.env.NODE_ENV === 'production' ? 'https://globesqlserver.herokuapp.com' : 'http://localhost:4000/graphql';
