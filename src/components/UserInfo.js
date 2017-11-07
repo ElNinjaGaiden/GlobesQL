@@ -15,7 +15,7 @@ class UserInfo extends React.Component {
     }
 
     render = () => {
-        return <div style={{display: 'nonen'}}></div>
+        return <div style={{display: 'none'}}></div>
     }
 }
 
