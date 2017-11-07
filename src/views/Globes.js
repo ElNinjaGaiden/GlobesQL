@@ -21,7 +21,6 @@ class GlobesView extends React.Component {
             document: newPlayerSubscription,
             variables: {},
             updateQuery: (prev, {subscriptionData}) => {
-                //console.log('newPlayerSubscription', subscriptionData);
                 if (!subscriptionData.data) {
                     return prev;
                 }
@@ -47,7 +46,6 @@ class GlobesView extends React.Component {
             document: globesClearedSubscription,
             variables: {},
             updateQuery: (prev, {subscriptionData}) => {
-                //console.log('globesClearedSubscription', subscriptionData);
                 if (!subscriptionData.data) {
                     return prev;
                 }
@@ -61,7 +59,6 @@ class GlobesView extends React.Component {
             document: globeAddedSubscription,
             variables: {},
             updateQuery: (prev, {subscriptionData}) => {
-                //console.log('globeAddedSubscription', subscriptionData);
                 if (!subscriptionData.data) {
                     return prev;
                 }
@@ -82,7 +79,6 @@ class GlobesView extends React.Component {
             document: globeDeletedSubscription,
             variables: {},
             updateQuery: (prev, {subscriptionData}) => {
-                //console.log('globeDeletedSubscription', subscriptionData);
                 if (!subscriptionData.data) {
                     return prev;
                 }
@@ -167,7 +163,5 @@ class GlobesView extends React.Component {
         }
     }
 }
-
-//export default GlobesView;
  
 export default graphql(globesQuery)(GlobesView);
